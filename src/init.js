@@ -1,5 +1,7 @@
 $(document).ready(function(){
   window.dancers = [];
+  window.audioPlaying = false;
+  window.audio = new Audio("audio.mp3");
 
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
