@@ -1,11 +1,7 @@
 var SpecialDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<img src="http://www.zangief.net/images/zangief4.gif">');
-  var styleSettings = {
-    top: top,
-    left: left
-  };
-  this.$node.css(styleSettings);
+  this.setPosition(top, left);
   if (!window.audioPlaying) {
     window.audio.play();
     window.audioPlaying = true;
